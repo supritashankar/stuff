@@ -1,5 +1,3 @@
-ss:project1.2 supritashankar$ vim solution.py 
-
 #!/usr/bin/python
 import sys
 import re
