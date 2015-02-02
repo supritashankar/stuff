@@ -32,11 +32,14 @@ For the first testcase, K=3, i.e., professor wants atleast 3 students to be in c
 For the second testcase, K=2, i.e, professor wants atleast 2 students to be in class and there are 2 who have arrived on time (0, -1), hence the class does not get cancelled.
 """
 
-k = raw_input()
+test_cases = raw_input()
 n = []
-k = []
-for testcase in k:
-	n.append(raw_input())
-	k.append(raw_input())
-	for student in n:
-		data.append(raw_input())
+data = []
+cutoff = []
+for idx,testcase in enumerate(test_cases):
+	inputn = raw_input()
+	students = inputn.split(' ')[0]
+	cutoff.append(inputn.split(' ')[1])
+	data.append(raw_input())
+
+print cutoff, data
