@@ -31,11 +31,27 @@ NO
 For the first testcase, K=3, i.e., professor wants atleast 3 students to be in class but there are only 2 who have arrived on time ( -3, -1 ), hence the class gets gets cancelled. 
 For the second testcase, K=2, i.e, professor wants atleast 2 students to be in class and there are 2 who have arrived on time (0, -1), hence the class does not get cancelled.
 """
+def classok(arrivaltimes, cutoff):
+	""" Returns if the class is happening - True or not - False """
+
+	""" arrivaltimes is an array indicating the arrival time of all the students and cutoff is the minimum number of students
+	the prof wants to conduct the class """
+
+	count = 0
+	flag = False
+	for at in arrivaltimes:
+		if at < = 0:
+			count += 1
+		if count >= cutoff:
+			flag = True
+			break
+	return flag
 
 test_cases = raw_input()
 n = []
 data = []
 cutoff = []
+
 for idx,testcase in enumerate(test_cases):
 	inputn = raw_input()
 	students = inputn.split(' ')[0]
@@ -43,3 +59,6 @@ for idx,testcase in enumerate(test_cases):
 	data.append(raw_input())
 
 print cutoff, data
+
+
+
